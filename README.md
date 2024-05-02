@@ -36,7 +36,39 @@ var_dump($result);//to get sms server response
 ```php
 	$status = $result->status;
 ```
+# For PHP Without using Built in Class 
+```php
 
+$data = array(
+	'sender_id' => '_your_sender_id_',
+	'ref' => 'sms',
+	'message' => '_your_message_here_',
+	'tel' => '_receiver_tel_'
+	);
+
+$curl = curl_init();
+#Replace _Your_API_ID_ and _your_api_key_ with the actual api credentials on your Profile
+curl_setopt_array($curl, array(
+  CURLOPT_URL => 'https://sms-api.hdev.rw/v1/api/_Your_API_ID_/_your_api_key_',
+  CURLOPT_RETURNTRANSFER => true,
+  CURLOPT_ENCODING => '',
+  CURLOPT_MAXREDIRS => 10,
+  CURLOPT_TIMEOUT => 0,
+  CURLOPT_FOLLOWLOCATION => true,
+  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+  CURLOPT_CUSTOMREQUEST => 'POST',
+  CURLOPT_POSTFIELDS => $data,
+  CURLOPT_HTTPHEADER => array(
+    'Cookie: PHPSESSID=114fumbhd1n41adgqc8si37fsp'
+  ),
+));
+
+$response = curl_exec($curl);
+
+curl_close($curl);
+echo $response;
+
+```
 # For Python
 
 ```python
