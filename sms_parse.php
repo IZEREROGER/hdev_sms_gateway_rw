@@ -2,7 +2,7 @@
 /*
 *	HDEV SMS Gateway 
 *	@email :  info@hdevtech.cloud
-*	@link : https://sms.hdevtech.cloud
+*	@link : https://sms-api.hdev.rw
 *
 */
 
@@ -26,7 +26,7 @@ if (!defined('hdev_sms')) {
       $curl = curl_init();
 
       curl_setopt_array($curl, array(
-        CURLOPT_URL => 'https://sms.hdevtech.cloud/api_pay/api/'.self::$api_id.'/'.self::$api_key,
+        CURLOPT_URL => 'https://sms-api.hdev.rw/api_pay/api/'.self::$api_id.'/'.self::$api_key,
         CURLOPT_RETURNTRANSFER => true,
         CURLOPT_ENCODING => '',
         CURLOPT_MAXREDIRS => 10,
@@ -47,7 +47,7 @@ if (!defined('hdev_sms')) {
       $curl = curl_init();
 
       curl_setopt_array($curl, array(
-         CURLOPT_URL => 'https://sms.hdevtech.cloud/api_pay/api/'.self::$api_id.'/'.self::$api_key,
+         CURLOPT_URL => 'https://sms-api.hdev.rw/api_pay/api/'.self::$api_id.'/'.self::$api_key,
         CURLOPT_RETURNTRANSFER => true,
         CURLOPT_ENCODING => '',
         CURLOPT_MAXREDIRS => 10,
@@ -68,7 +68,7 @@ if (!defined('hdev_sms')) {
       $curl = curl_init();
 
       curl_setopt_array($curl, array(
-         CURLOPT_URL => 'https://sms.hdevtech.cloud/api_pay/api/'.self::$api_id.'/'.self::$api_key,
+         CURLOPT_URL => 'https://sms-api.hdev.rw/api_pay/api/'.self::$api_id.'/'.self::$api_key,
         CURLOPT_RETURNTRANSFER => true,
         CURLOPT_ENCODING => '',
         CURLOPT_MAXREDIRS => 10,
